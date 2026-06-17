@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <meta name="description" content="Premium Pakistani Islamic Wedding Invitation - Join us for a luxurious celebration of love and faith">
+  <title>✦ Premium Islamic Wedding ✦ Fahad & Zainab</title>
+
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #800020;
+      --secondary: #C9A84C;
+      --bg: #FFF5F5;
+      --text: #2D2D2D;
+      --golden-glow: 0 8px 32px rgba(201, 168, 76, 0.25);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+      transition: background-image 0.5s ease;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* === WEDDING ANIMATION BACKGROUND LAYER === */
+    #weddingAnimationBg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    /* Floating rose petals */
+    .wedding-petal {
+      position: absolute;
+      opacity: 0;
+      animation: floatWeddingPetal linear infinite;
+      pointer-events: none;
+      will-change: transform, opacity;
+    }
+
+    @keyframes floatWeddingPetal {
+      0% {
+        transform: translateY(105vh) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      5% {
+        opacity: 0.7;
+      }
+      15% {
+        opacity: 0.5;
+      }
+      85% {
+        opacity: 0.5;
+      }
+      95% {
+        opacity: 0.1;
+      }
+      100% {
+        transform: translateY(-15vh) translateX(80px) rotate(540deg);
+        opacity: 0;
+      }
+    }
+
+    /* Golden particles */
+    .golden-particle {
+      position: absolute;
+      background: radial-gradient(circle, #D4AF37 0%, #F8F4EC 70%, transparent 100%);
+      border-radius: 50%;
+      opacity: 0;
+      animation: floatGoldenParticle ease-in-out infinite;
+      pointer-events: none;
+      will-change: transform, opacity;
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.6), 0 0 24px rgba(212, 175, 55, 0.3);
+    }
+
+    @keyframes floatGoldenParticle {
+      0% {
+        transform: translateY(105vh) translateX(0) scale(0.3);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.9;
+      }
+      30% {
+        opacity: 0.6;
+      }
+      70% {
+        opacity: 0.5;
+      }
+      90% {
+        opacity: 0.2;
+      }
+      100% {
+        transform: translateY(-10vh) translateX(-30px) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Glowing lights / bokeh */
+    .bokeh-light {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,245,245,0.5) 0%, rgba(212,175,55,0.2) 50%, transparent 70%);
+      opacity: 0;
+      animation: bokehFloat ease-in-out infinite;
+      pointer-events: none;
+      will-change: transform, opacity;
+    }
+
+    @keyframes bokehFloat {
+      0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.5;
+      }
+      80% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-40px) scale(1.3);
+        opacity: 0;
+      }
+    }
+
+    /* Floating hearts */
+    .floating-heart {
+      position: absolute;
+      opacity: 0;
+      animation: floatHeart ease-in-out infinite;
+      pointer-events: none;
+      will-change: transform, opacity;
+      font-size: 20px;
+      color: #D4AF37;
+      text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+    }
+
+    @keyframes floatHeart {
+      0% {
+        transform: translateY(105vh) translateX(0) scale(0.5);
+        opacity: 0;
+      }
+      8% {
+        opacity: 0.7;
+      }
+      20% {
+        opacity: 0.4;
+      }
+      80% {
+        opacity: 0.3;
+      }
+      95% {
+        opacity: 0.05;
+      }
+      100% {
+        transform: translateY(-10vh) translateX(50px) scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    /* Floral Background */
+    .floral-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.12;
+      background-image:
+        radial-gradient(circle at 10% 20%, #ffb6c1 1px, transparent 1px),
+        radial-gradient(circle at 90% 80%, #ffb6c1 1px, transparent 1px),
+        radial-gradient(circle at 30% 70%, #ffc0cb 1px, transparent 1px),
+        radial-gradient(circle at 70% 30%, #ffc0cb 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, #ffe4e1 2px, transparent 2px),
+        radial-gradient(circle at 15% 85%, #ffe4e1 2px, transparent 2px),
+        radial-gradient(circle at 85% 15%, #ffe4e1 2px, transparent 2px),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23ffb6c1" d="M100 20c-5 0-10 5-10 10 0 15 10 25 10 25s10-10 10-25c0-5-5-10-10-10zm0 0c-5 0-10 5-10 10 0 15 10 25 10 25s10-10 10-25c0-5-5-10-10-10z"/></svg>');
+      background-size: 300px 300px, 300px 300px, 300px 300px, 300px 300px, 400px 400px, 400px 400px, 400px 400px, 200px 200px;
+      background-repeat: repeat;
+    }
+
+    /* Animated floating petals (original) */
+    .petal {
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.18;
+      animation: floatPetal 15s infinite ease-in-out;
+      font-size: 24px;
+      color: #ffb6c1;
+    }
+
+    @keyframes floatPetal {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.18; }
+      90% { opacity: 0.18; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    h1, h2, h3, .elegant-heading {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .decorative-font {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .text-gold { color: var(--secondary); }
+    .bg-primary { background-color: var(--primary); }
+    .border-gold { border-color: var(--secondary); }
+
+    .glass-card {
+      background: rgba(255, 245, 245, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      box-shadow: 0 20px 40px rgba(128, 0, 32, 0.08);
+      border-radius: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-luxury {
+      background: linear-gradient(135deg, var(--primary) 0%, #5e0018 100%);
+      color: white;
+      border: 1px solid var(--secondary);
+      box-shadow: 0 6px 18px rgba(128, 0, 32, 0.3);
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+    .btn-luxury:hover {
+      background: linear-gradient(135deg, var(--secondary) 0%, #b3923c 100%);
+      color: var(--primary);
+      border-color: var(--primary);
+      box-shadow: 0 12px 28px rgba(201, 168, 76, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .islamic-pattern {
+      background-image: radial-gradient(circle at 20% 30%, rgba(201,168,76,0.06) 1px, transparent 1px);
+      background-size: 30px 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #splash {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: #2D2D2D; z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.8s ease, visibility 0.8s;
+    }
+    .hidden-splash { opacity: 0; visibility: hidden; }
+
+    .particle {
+      position: absolute; background: var(--secondary);
+      border-radius: 50%; box-shadow: 0 0 15px gold;
+      animation: floatParticle 6s infinite ease-in-out;
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) scale(1); opacity: 0.6; }
+      50% { transform: translateY(-30px) scale(1.3); opacity: 1; }
+      100% { transform: translateY(0px) scale(1); opacity: 0.6; }
+    }
+
+    .fade-in {
+      opacity: 0; transform: translateY(25px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    .hover-lift { transition: transform 0.35s ease, box-shadow 0.4s; }
+    .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 25px 35px -12px rgba(128,0,32,0.25); }
+
+    @keyframes softBounceIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      60% { transform: scale(1.05); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .animate-couple-img { animation: softBounceIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+    @keyframes fadeUpGlow {
+      0% { opacity: 0; transform: translateY(15px); text-shadow: 0 0 0px var(--secondary); }
+      100% { opacity: 1; transform: translateY(0); text-shadow: 0 0 12px rgba(201,168,76,0.5); }
+    }
+    .animate-name-reveal { animation: fadeUpGlow 0.9s ease-out forwards; }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+
+    /* Hero section mobile optimization */
+    #hero {
+      background-attachment: scroll;
+      background-position: center center;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    @media (max-width: 640px) {
+      #hero h2 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+      }
+      #hero .text-lg {
+        font-size: 1rem;
+      }
+      .hero-bg-edit {
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 12px;
+      }
+    }
+
+    /* Admin mode styles */
+    .admin-mode .editable-element {
+      border: 2px dashed rgba(201,168,76,0.6);
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .admin-mode .editable-element:hover {
+      background: rgba(201,168,76,0.1);
+      border-color: #C9A84C;
+    }
+    .admin-mode .editable-element::after {
+      content: "\f304";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      font-size: 14px;
+      color: #C9A84C;
+      background: white;
+      border-radius: 50%;
+      padding: 4px;
+      opacity: 0;
+      transition: 0.2s;
+      z-index: 5;
+    }
+    .admin-mode .editable-element:hover::after {
+      opacity: 1;
+    }
+
+    .admin-mode .image-container {
+      border: 2px dashed rgba(201,168,76,0.6);
+      cursor: pointer;
+    }
+
+    .image-edit-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%; opacity: 0; transition: 0.3s; cursor: pointer;
+    }
+    .admin-mode .image-container:hover .image-edit-overlay {
+      opacity: 1;
+    }
+
+    .hero-bg-edit {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      opacity: 0;
+      transition: 0.3s;
+      z-index: 10;
+      border: 1px solid rgba(201,168,76,0.5);
+    }
+    .admin-mode .hero-bg-edit {
+      opacity: 1;
+    }
+
+    .bg-edit-btn {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: rgba(128,0,32,0.8);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 25px;
+      font-size: 13px;
+      cursor: pointer;
+      z-index: 49;
+      display: none;
+      border: 1px solid #C9A84C;
+    }
+    .admin-mode .bg-edit-btn {
+      display: block;
+    }
+
+    .event-image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      height: 180px;
+    }
+    .event-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .event-image-edit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .admin-mode .event-image-container:hover .event-image-edit {
+      opacity: 1;
+    }
+
+    #secretAdminTrigger {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 42px;
+      height: 42px;
+      background: rgba(128,0,32,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      opacity: 0.25;
+      cursor: pointer;
+      z-index: 50;
+      transition: all 0.3s;
+      border: 1px solid transparent;
+    }
+    #secretAdminTrigger:hover {
+      opacity: 0.9;
+      border-color: #C9A84C;
+      background: rgba(128,0,32,0.2);
+    }
+
+    .admin-indicator {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: #800020;
+      color: white;
+      padding: 6px 16px;
+      border-radius: 25px;
+      font-size: 13px;
+      z-index: 999;
+      display: none;
+      border: 1px solid #C9A84C;
+    }
+    .admin-mode .admin-indicator {
+      display: block;
+    }
+
+    section, nav, footer {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden" id="websiteBody">
+
+  <!-- === WEDDING ANIMATION BACKGROUND === -->
+  <div id="weddingAnimationBg"></div>
+
+  <!-- Floral Background Layer -->
+  <div class="floral-bg"></div>
+  <div class="petal" style="top:90%; left:10%; animation-delay:0s;">🌸</div>
+  <div class="petal" style="top:95%; left:25%; animation-delay:2s;">🌷</div>
+  <div class="petal" style="top:92%; left:40%; animation-delay:4s;">🌸</div>
+  <div class="petal" style="top:88%; left:55%; animation-delay:6s;">🌺</div>
+  <div class="petal" style="top:93%; left:70%; animation-delay:8s;">🌸</div>
+  <div class="petal" style="top:97%; left:85%; animation-delay:10s;">🌷</div>
+  <div class="petal" style="top:91%; left:15%; animation-delay:12s;">🌺</div>
+  <div class="petal" style="top:94%; left:60%; animation-delay:14s;">🌸</div>
+
+  <!-- Splash Screen -->
+  <div id="splash">
+    <div class="relative w-full h-full flex flex-col items-center justify-center">
+      <div id="particles-container" class="absolute inset-0 pointer-events-none"></div>
+      <h2 class="text-6xl md:text-7xl decorative-font text-gold mb-4 z-10">Bismillah</h2>
+      <p class="text-xl tracking-widest text-gray-300 mb-10 z-10">In the name of Allah</p>
+      <button id="enterBtn" class="btn-luxury px-10 py-4 rounded-full text-lg font-semibold tracking-wide z-10">
+        Enter Website <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Website -->
+  <div id="mainContent" class="relative">
+
+    <!-- Admin Indicator -->
+    <div class="admin-indicator" id="adminIndicator">
+      <i class="fas fa-lock-open mr-2"></i> Admin Mode Active
+    </div>
+
+    <!-- Website Background Edit Button -->
+    <button class="bg-edit-btn" id="bgEditBtn" onclick="changeWebsiteBackground()">
+      <i class="fas fa-image mr-2"></i> Change Website Background
+    </button>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-lg border-b border-gold/20 shadow-sm">
+      <div class="max-w-7xl mx-auto flex justify-between items-center py-3 px-6">
+        <div class="text-sm md:text-base font-medium tracking-wider text-primary uppercase border-b border-gold/40 pb-0.5 editable-element" data-type="text" data-id="navTitle">
+          Wedding Invitation
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
+          <a href="#hero" class="hover:text-primary transition">Home</a>
+          <a href="#events" class="hover:text-primary transition">Events</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </div>
+        <div class="md:hidden text-primary text-2xl"><i class="fas fa-bars"></i></div>
+      </div>
+    </nav>
+
+    <!-- Hero Section - Mobile Optimized -->
+    <section id="hero" class="relative w-full min-h-screen flex items-center justify-center bg-cover bg-center"
+             style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.5)), url('main image.jpg');"
+             id="heroSection">
+      <div class="hero-bg-edit" onclick="changeHeroBackground()">
+        <i class="fas fa-camera mr-2"></i> Change Hero Background
+      </div>
+      <div class="text-center text-white px-4 max-w-4xl mx-auto w-full">
+        <p class="text-lg md:text-xl tracking-[0.3em] uppercase mb-4 text-gold/80 font-light editable-element" data-type="text" data-id="heroSubtitle">Together with their families</p>
+        <h2 class="text-5xl md:text-7xl decorative-font text-gold drop-shadow-2xl mb-6 leading-tight">
+          <span class="editable-element" data-type="text" data-id="heroGroomName">Fahad Ali</span>
+          <span class="text-white/90">&</span>
+          <span class="editable-element" data-type="text" data-id="heroBrideName">Zainab</span>
+        </h2>
+        <p class="text-xl md:text-2xl font-light mb-8 tracking-wider editable-element" data-type="text" data-id="weddingDate">01 . 07 . 2026 | Vehari</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="#events" class="border border-gold text-gold px-8 py-3 rounded-full hover:bg-gold/10 transition">View Events</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quranic Verse -->
+    <section class="py-20 islamic-pattern bg-white/60">
+      <div class="max-w-4xl mx-auto text-center px-6 fade-in">
+        <div class="text-7xl decorative-font text-gold mb-6">﴾ وَمِنْ آيَاتِهِ ﴿</div>
+        <p class="text-2xl md:text-3xl playfair italic text-gray-700 leading-relaxed editable-element" data-type="text" data-id="quranVerse">"And among His signs is that He created for you mates from among yourselves, that you may find tranquility in them; and He placed between you affection and mercy."</p>
+        <p class="text-gold mt-4 text-lg editable-element" data-type="text" data-id="quranRef">— Quran 30:21</p>
+        <div class="w-24 h-0.5 bg-gold mx-auto mt-8"></div>
+      </div>
+    </section>
+
+    <!-- Couple Introduction (Groom First, Bride Second) -->
+    <section class="py-20 max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+
+        <!-- Groom Card (First) -->
+        <div class="glass-card p-8 text-center fade-in">
+          <div class="image-container relative w-40 h-40 mx-auto mb-4 rounded-full border-2 border-gold shadow-lg overflow-hidden">
+            <img src="groom image.png"
+                 alt="Groom" class="w-full h-full object-cover animate-couple-img"
+                 data-type="image" data-id="groomImage" id="groomImage">
+            <div class="image-edit-overlay" onclick="changeImage('groomImage')">
+              <i class="fas fa-camera text-white text-2xl"></i>
+            </div>
+          </div>
+          <h3 class="text-3xl decorative-font text-primary animate-name-reveal editable-element" data-type="text" data-id="groomName">Fahad Ali</h3>
+          <p class="text-gray-600 mt-2 editable-element" data-type="text" data-id="groomParents">Son of Mr. & Mrs. Shoukat Ali</p>
+        </div>
+
+        <!-- Bride Card (Second) -->
+        <div class="glass-card p-8 text-center fade-in">
+          <div class="image-container relative w-40 h-40 mx-auto mb-4 rounded-full border-2 border-gold shadow-lg overflow-hidden">
+            <img src="bride image.jpg"
+                 alt="Bride" class="w-full h-full object-cover animate-couple-img"
+                 data-type="image" data-id="brideImage" id="brideImage">
+            <div class="image-edit-overlay" onclick="changeImage('brideImage')">
+              <i class="fas fa-camera text-white text-2xl"></i>
+            </div>
+          </div>
+          <h3 class="text-3xl decorative-font text-primary animate-name-reveal delay-200 editable-element" data-type="text" data-id="brideName">Zainab</h3>
+          <p class="text-gray-600 mt-2 editable-element" data-type="text" data-id="brideParents"> </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wedding Events (Mehndi, Barat, Walima only) -->
+    <section id="events" class="py-20 bg-white/40">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-5xl decorative-font text-center text-primary mb-16 editable-element" data-type="text" data-id="eventsHeading">Our Events</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
+
+          <!-- Mehndi Ceremony (First) -->
+          <div class="glass-card p-6 text-center hover-lift fade-in" style="border-top: 4px solid #eab308;">
+            <div class="event-image-container">
+              <img src="mehndi image.jpg"
+                   alt="Mehndi Ceremony" id="mehndiImage" data-type="image" data-id="mehndiImage">
+              <div class="event-image-edit" onclick="changeImage('mehndiImage')">
+                <i class="fas fa-camera mr-2"></i> Change Image
+              </div>
+            </div>
+            <i class="fas fa-leaf text-4xl text-yellow-600 mb-3"></i>
+            <h3 class="text-3xl decorative-font text-primary editable-element" data-type="text" data-id="mehndiTitle">Mehndi Ceremony</h3>
+            <p class="text-sm text-gray-500 mt-2 editable-element" data-type="text" data-id="mehndiDateTime">01 July 2026 • 8 PM</p>
+            <p class="font-medium editable-element" data-type="text" data-id="mehndiVenue">Kachi Mandi, Vehari</p>
+            <div class="mt-4 text-gold text-sm">Countdown: <span class="countdown font-bold" data-event="2026-06-30T19:00:00">--</span></div>
+          </div>
+
+          <!-- Barat Ceremony (Second) -->
+          <div class="glass-card p-6 text-center hover-lift fade-in" style="border-top: 4px solid #800020;">
+            <div class="event-image-container">
+              <img src="Barat image.jpg"
+                   alt="Barat Ceremony" id="baratImage" data-type="image" data-id="baratImage">
+              <div class="event-image-edit" onclick="changeImage('baratImage')">
+                <i class="fas fa-camera mr-2"></i> Change Image
+              </div>
+            </div>
+            <i class="fas fa-crown text-4xl text-primary mb-3"></i>
+            <h3 class="text-3xl decorative-font text-primary editable-element" data-type="text" data-id="baratTitle">Barat Ceremony</h3>
+            <p class="text-sm text-gray-500 mt-2 editable-element" data-type="text" data-id="baratDateTime">02 July 2026 • 12 pm to 4 PM</p>
+            <p class="font-medium editable-element" data-type="text" data-id="baratVenue">Abdullah Marquee 2-KM Khanewal Road Vehari</p>
+            <div class="mt-4 text-gold text-sm">Countdown: <span class="countdown font-bold" data-event="2026-07-01T20:00:00">--</span></div>
+          </div>
+
+          <!-- Walima Ceremony (Third) -->
+          <div class="glass-card p-6 text-center hover-lift fade-in" style="border-top: 4px solid #C9A84C;">
+            <div class="event-image-container">
+              <img src="Walima image.jpeg"
+                   alt="Walima Ceremony" id="walimaImage" data-type="image" data-id="walimaImage">
+              <div class="event-image-edit" onclick="changeImage('walimaImage')">
+                <i class="fas fa-camera mr-2"></i> Change Image
+              </div>
+            </div>
+            <i class="fas fa-utensils text-4xl text-gold mb-3"></i>
+            <h3 class="text-3xl decorative-font text-primary editable-element" data-type="text" data-id="walimaTitle">Walima Ceremony</h3>
+            <p class="text-sm text-gray-500 mt-2 editable-element" data-type="text" data-id="walimaDateTime">03 July 2026 • 12 pm to 4 PM</p>
+            <p class="font-medium editable-element" data-type="text" data-id="walimaVenue">Abdullah Marquee 2-KM Khanewal Road Vehari</p>
+            <div class="mt-4 text-gold text-sm">Countdown: <span class="countdown font-bold" data-event="2026-07-02T19:00:00">--</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="py-10 max-w-5xl mx-auto px-6 fade-in">
+      <div class="rounded-2xl overflow-hidden shadow-2xl">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3436.5755589862934!2d72.3711173!3d30.0431909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393c77a4e68f4e61%3A0x73eb19b15d2c76e5!2sVehari%20City!5e0!3m2!1sen!2s!4v1690000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 text-center">
+      <p class="text-2xl editable-element" data-type="text" data-id="contactInfo">📞 +92 329 1686036</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center border-t border-gold/30">
+      <p class="text-sm text-gray-500 mt-2 editable-element" data-type="text" data-id="copyright"><i class="far fa-copyright mr-1"></i> MI Web Cards</p>
+    </footer>
+  </div>
+
+  <!-- Secret Admin Trigger Icon -->
+  <div id="secretAdminTrigger" title="Admin Access">
+    <i class="fas fa-fingerprint"></i>
+  </div>
+
+  <script>
+    (function() {
+      // =============================================
+      // WEDDING ANIMATION BACKGROUND - JAVASCRIPT
+      // =============================================
+      function createWeddingAnimation() {
+        const container = document.getElementById('weddingAnimationBg');
+        if (!container) return;
+        
+        // Clear any existing elements
+        container.innerHTML = '';
+        
+        // Helper to create elements
+        function createElement(tag, className, styles = {}) {
+          const el = document.createElement(tag);
+          el.className = className;
+          Object.assign(el.style, styles);
+          return el;
+        }
+        
+        // 1. Create floating rose petals (emoji based for performance)
+        const petalEmojis = ['🌸', '🌷', '🌺', '💮', '🏵️', '✿'];
+        for (let i = 0; i < 18; i++) {
+          const petal = createElement('div', 'wedding-petal', {
+            left: Math.random() * 100 + '%',
+            animationDuration: (Math.random() * 12 + 10) + 's',
+            animationDelay: (Math.random() * 12) + 's',
+            fontSize: (Math.random() * 18 + 14) + 'px',
+            opacity: '0'
+          });
+          petal.textContent = petalEmojis[Math.floor(Math.random() * petalEmojis.length)];
+          container.appendChild(petal);
+        }
+        
+        // 2. Golden particles
+        for (let i = 0; i < 25; i++) {
+          const size = Math.random() * 8 + 4;
+          const particle = createElement('div', 'golden-particle', {
+            left: Math.random() * 100 + '%',
+            width: size + 'px',
+            height: size + 'px',
+            animationDuration: (Math.random() * 15 + 12) + 's',
+            animationDelay: (Math.random() * 15) + 's'
+          });
+          container.appendChild(particle);
+        }
+        
+        // 3. Bokeh / glowing lights
+        for (let i = 0; i < 12; i++) {
+          const size = Math.random() * 80 + 50;
+          const light = createElement('div', 'bokeh-light', {
+            left: Math.random() * 100 + '%',
+            top: Math.random() * 100 + '%',
+            width: size + 'px',
+            height: size + 'px',
+            animationDuration: (Math.random() * 10 + 8) + 's',
+            animationDelay: (Math.random() * 10) + 's'
+          });
+          container.appendChild(light);
+        }
+        
+        // 4. Floating hearts
+        for (let i = 0; i < 10; i++) {
+          const heart = createElement('div', 'floating-heart', {
+            left: Math.random() * 100 + '%',
+            animationDuration: (Math.random() * 14 + 12) + 's',
+            animationDelay: (Math.random() * 14) + 's',
+            fontSize: (Math.random() * 16 + 16) + 'px'
+          });
+          heart.innerHTML = '♥';
+          container.appendChild(heart);
+        }
+      }
+
+      // Initialize wedding animation
+      createWeddingAnimation();
+      
+      // =============================================
+      // EXISTING FUNCTIONALITY PRESERVED BELOW
+      // =============================================
+      const ADMIN_PASSWORD = "wedding2026";
+      let isAdminMode = false;
+
+      // Splash screen
+      const splash = document.getElementById('splash');
+      const enterBtn = document.getElementById('enterBtn');
+      const particlesContainer = document.getElementById('particles-container');
+
+      for (let i = 0; i < 25; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        const size = Math.random() * 10 + 4;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 5 + 's';
+        particlesContainer.appendChild(particle);
+      }
+
+      enterBtn.addEventListener('click', () => {
+        splash.classList.add('hidden-splash');
+        document.body.style.overflow = 'auto';
+        initScrollAnimations();
+      });
+
+      // Countdown timers
+      function updateCountdowns() {
+        document.querySelectorAll('.countdown').forEach(el => {
+          const eventDate = new Date(el.getAttribute('data-event')).getTime();
+          const now = new Date().getTime();
+          const diff = eventDate - now;
+          if (diff < 0) { el.innerText = 'Event started'; return; }
+          const days = Math.floor(diff / (1000*60*60*24));
+          const hours = Math.floor((diff % (86400000)) / (3600000));
+          el.innerText = `${days}d ${hours}h`;
+        });
+      }
+      setInterval(updateCountdowns, 1000);
+      updateCountdowns();
+
+      function initScrollAnimations() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+          });
+        }, { threshold: 0.2 });
+        fadeElements.forEach(el => observer.observe(el));
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // ----- ADMIN AUTHENTICATION -----
+      const secretTrigger = document.getElementById('secretAdminTrigger');
+      const adminIndicator = document.getElementById('adminIndicator');
+
+      function toggleAdminMode() {
+        if (isAdminMode) {
+          if (confirm('Exit admin mode?')) {
+            deactivateAdmin();
+          }
+          return;
+        }
+
+        const password = prompt('🔐 Enter admin password to unlock editing:');
+        if (password === ADMIN_PASSWORD) {
+          activateAdmin();
+        } else if (password !== null) {
+          alert('❌ Incorrect password. Access denied.');
+        }
+      }
+
+      function activateAdmin() {
+        isAdminMode = true;
+        document.body.classList.add('admin-mode');
+        adminIndicator.style.display = 'block';
+        secretTrigger.innerHTML = '<i class="fas fa-lock-open"></i>';
+        secretTrigger.style.opacity = '0.9';
+        attachAdminListeners();
+      }
+
+      function deactivateAdmin() {
+        isAdminMode = false;
+        document.body.classList.remove('admin-mode');
+        adminIndicator.style.display = 'none';
+        secretTrigger.innerHTML = '<i class="fas fa-fingerprint"></i>';
+        secretTrigger.style.opacity = '0.25';
+        removeAdminListeners();
+      }
+
+      secretTrigger.addEventListener('click', toggleAdminMode);
+
+      // ----- IMAGE CHANGE FUNCTIONS -----
+      window.changeImage = function(imageId) {
+        if (!isAdminMode) return;
+        const img = document.getElementById(imageId);
+        if (!img) return;
+        const currentSrc = img.src;
+        const newSrc = prompt('📷 Enter new image URL (or local path like: images/bride.jpg):', currentSrc);
+        if (newSrc && newSrc.trim() !== '') {
+          img.src = newSrc.trim();
+        }
+      };
+
+      window.changeHeroBackground = function() {
+        if (!isAdminMode) return;
+        const heroSection = document.getElementById('heroSection');
+        const currentBg = heroSection.style.backgroundImage;
+        const currentUrl = currentBg.match(/url\(["']?([^"')]+)["']?\)/)?.[1] || '';
+        const newUrl = prompt('🖼️ Enter new hero background image URL (or local path like: images/hero-bg.jpg):', currentUrl);
+        if (newUrl && newUrl.trim() !== '') {
+          heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.5)), url('${newUrl.trim()}')`;
+        }
+      };
+
+      window.changeWebsiteBackground = function() {
+        if (!isAdminMode) return;
+        const body = document.getElementById('websiteBody');
+        const currentBg = body.style.backgroundImage;
+        const currentUrl = currentBg.match(/url\(["']?([^"')]+)["']?\)/)?.[1] || '';
+        const newUrl = prompt('🌐 Enter new website background image URL (leave empty to remove):', currentUrl);
+        if (newUrl !== null) {
+          if (newUrl.trim() === '') {
+            body.style.backgroundImage = '';
+            body.style.backgroundSize = '';
+            body.style.backgroundAttachment = '';
+          } else {
+            body.style.backgroundImage = `url('${newUrl.trim()}')`;
+            body.style.backgroundSize = 'cover';
+            body.style.backgroundAttachment = 'fixed';
+            body.style.backgroundPosition = 'center';
+          }
+        }
+      };
+
+      // Admin edit handlers
+      function handleAdminClick(e) {
+        if (!isAdminMode) return;
+
+        const imageOverlay = e.target.closest('.image-edit-overlay');
+        if (imageOverlay) {
+          const container = imageOverlay.closest('.image-container');
+          const img = container?.querySelector('img');
+          if (img) {
+            changeImage(img.id);
+            return;
+          }
+        }
+
+        const eventEdit = e.target.closest('.event-image-edit');
+        if (eventEdit) {
+          const container = eventEdit.closest('.event-image-container');
+          const img = container?.querySelector('img');
+          if (img) {
+            changeImage(img.id);
+            return;
+          }
+        }
+
+        const target = e.target.closest('.editable-element');
+        if (!target) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const type = target.getAttribute('data-type');
+        const id = target.getAttribute('data-id');
+
+        if (type === 'text') {
+          const current = target.innerText.trim();
+          const newValue = prompt(`✏️ Edit text (${id}):`, current);
+          if (newValue !== null && newValue.trim() !== '') {
+            target.innerText = newValue.trim();
+            syncRelatedElements(id, newValue.trim());
+          }
+        } else if (type === 'image') {
+          const img = target.tagName === 'IMG' ? target : target.querySelector('img');
+          if (img) {
+            changeImage(img.id);
+          }
+        }
+      }
+
+      function syncRelatedElements(id, value) {
+        // Hero groom name syncs with groom card
+        if (id === 'heroGroomName') {
+          const groomDisplay = document.querySelector('[data-id="groomName"]');
+          if (groomDisplay) groomDisplay.innerText = value;
+        } 
+        // Hero bride name syncs with bride card
+        else if (id === 'heroBrideName') {
+          const brideDisplay = document.querySelector('[data-id="brideName"]');
+          if (brideDisplay) brideDisplay.innerText = value;
+        } 
+        // Groom card name syncs with hero
+        else if (id === 'groomName') {
+          const heroGroom = document.querySelector('[data-id="heroGroomName"]');
+          if (heroGroom) heroGroom.innerText = value;
+        } 
+        // Bride card name syncs with hero
+        else if (id === 'brideName') {
+          const heroBride = document.querySelector('[data-id="heroBrideName"]');
+          if (heroBride) heroBride.innerText = value;
+        }
+      }
+
+      function attachAdminListeners() {
+        document.addEventListener('click', handleAdminClick, true);
+      }
+
+      function removeAdminListeners() {
+        document.removeEventListener('click', handleAdminClick, true);
+      }
+    })();
+  </script>
+</body>
+</html>
